@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form action="/home/calc" method="post">
+        <div class="mb-3">
+            <label for="num1" class="form-label">Операнд 1</label>
+            <input name="num1" type="text" class="form-control" id="num1" />
+        </div>
+        <div class="mb-3">
+            <label for="num2" class="form-label">Операнд 2</label>
+            <input name="num2" type="text" class="form-control" id="num2"/>
+        </div>
+        <div class="mb-3">
+            <label for="Operation" class="form-label">Операторы</label>
+            <select type="result" name="operationType" class="form-control" id= "result">
+                <option value="1">Сложение</option>
+                <option value="2">Вычитание</option>
+                <option value="3">Умножение</option>
+                <option value="4">Деление</option>
+            </select>
+        </div>
+    <button>Рассчитать</button>
+    </form>
+</div>

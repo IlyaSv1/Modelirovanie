@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    Результат расчета: @ViewData["result"]
+    <form action="/home/index" method="post">
+        <button>Вернуться обратно</button>
+    </form>
+</div>
