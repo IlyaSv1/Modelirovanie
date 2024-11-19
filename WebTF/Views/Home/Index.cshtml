@@ -3,24 +3,36 @@
 }
 
 <div class="text-center">
-    <form action="/home/calc" method="post">
+    <form action="/home/model" method="post">
         <div class="mb-3">
-            <label for="num1" class="form-label">Операнд 1</label>
-            <input name="num1" type="text" class="form-control" id="num1" />
+            <label for="av" class="form-label">Объемный коэффициент теплоотдачи, Вт/(м<sub>3</sub> • К)</label>
+            <input name="av" type="text" class="form-control" id="av" />
         </div>
         <div class="mb-3">
-            <label for="num2" class="form-label">Операнд 2</label>
-            <input name="num2" type="text" class="form-control" id="num2"/>
+            <label for="wg" class="form-label">Скорость газа на свободное сечение шахты, м/с</label>
+            <input name="wg" type="text" class="form-control" id="wg" />
         </div>
         <div class="mb-3">
-            <label for="Operation" class="form-label">Операторы</label>
-            <select type="result" name="operationType" class="form-control" id= "result">
-                <option value="1">Сложение</option>
-                <option value="2">Вычитание</option>
-                <option value="3">Умножение</option>
-                <option value="4">Деление</option>
-            </select>
+            <label for="H0" class="form-label">Высота слоя, м</label>
+            <input name="H0" type="text" class="form-control" id="H0" />
         </div>
-    <button>Рассчитать</button>
+        <div class="mb-3">
+            <label for="Cg" class="form-label">
+                Средняя теплоемкость газа,кДж/(м3 • К)
+            </label>
+            <input name="Cg" type="text" class="form-control" id="Cg" />
+        </div>
+
+        @*         <div class="mb-3">
+        <label for="Operation" class="form-label">Операторы</label>
+        <select type="result" name="operationType" class="form-control" id= "result">
+        <option value="1">Сложение</option>
+        <option value="2">Вычитание</option>
+        <option value="3">Умножение</option>
+        <option value="4">Деление</option>
+        </select>
+        </div> *@
+
+        <button>Рассчитать</button>
     </form>
 </div>

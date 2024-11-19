@@ -18,17 +18,28 @@ namespace Modelirovanie.Controllers
             return View();
         }
 
-        public IActionResult Calc(int num1, int num2, int operationType)
+        //public IActionResult Calc(int num1, int num2, int operationType)
+        //{
+        //    var result = operationType switch
+        //    {
+        //        1 => num1 + num2,
+        //        2 => num1 - num2,
+        //        3 => num1 * num2,
+        //        4 => num1 / num2,
+        //        _ => throw new Exception()
+        //    };
+        //    ViewData["result"] = result;
+        //    return View();
+        //}
+
+        public IActionResult Model(int av, double H0, double wg, double Cg)
         {
-            var result = operationType switch
+            var result = new List<double>();
+            for (double h = 0; h <= H0; h += 0.5)
             {
-                1 => num1 + num2,
-                2 => num1 - num2,
-                3 => num1 * num2,
-                4 => num1 / num2,
-                _ => throw new Exception()
-            };
-            ViewData["result"] = result;
+                result.Add(av * h / (wg * Cg) / 1000);
+            }
+            ViewBag.Result = result;
             return View();
         }
 
